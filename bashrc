@@ -2,8 +2,8 @@
 # .bashrc                                  #
 # Junhyeok Ahn ( junhyeokahn91@gmail.com ) #
 ############################################
-alias vi='vim'
 
+alias vi='vim'
 if [ -n "$TMUX_PANE" ]; then
   # https://github.com/wellle/tmux-complete.vim
   fzf_tmux_words() {
@@ -48,9 +48,9 @@ function gpm() {
 }
 
 # Anaconda Virtual Env
-tf() {
-  source activate tensorflow
-}
+#tf() {
+  #source activate tensorflow
+#}
 
 sym() {
   source activate sym_walking
@@ -97,3 +97,39 @@ export LSCOLORS=exfxcxdxbxegedabagacad;
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+## github/hub
+if [ -f /path/to/hub.bash_completion ]; then
+      . /path/to/hub.bash_completion
+fi
+
+## hochul
+# fix error: ambiguous argument 'HEAD'
+zgit_info_update() {
+    zgit_info=()
+
+    local gitdir=$(git rev-parse --git-dir 2>/dev/null)
+    if [ $? -ne 0 ] || [ -z "$gitdir" ]; then
+        return
+    fi
+}
+
+# aliases
+alias vv='vi ~/.vimrc'
+alias vb='vi ~/.bashrc'
+alias sb='source ~/.bashrc'
+alias gs='git status'
+alias gc='git clone'
+alias gb='git branch'
+alias gch='git checkout'
+alias jp='jupyter notebook'
+alias tf='source ~/envs/tensorflow/bin/activate'
+alias dt='deactivate'
+#alias tf='conda activate tensorflow'
+alias pg='conda activate pygame'
+alias de='conda deactivate'
+alias py='python3'
+alias tm='tmux'
+alias ni='npm install'
+alias ns='npm start'
+alias run='./run.sh'
