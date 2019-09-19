@@ -6,6 +6,31 @@
 " =============================================================================
 " Plugin Setting
 " =============================================================================
+
+"Execute Python
+nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+"number
+set number relativenumber
+"save file
+noremap <silent> <C-S> :update<CR>
+vnoremap <silent> <C-S> <C-C>:update<CR>
+inoremap <silent> <C-S> <C-O>:update<CR>
+"map ;to:
+map ; :
+"MJ Add
+let g:airline#extensions#tabline#enabled = 1
+nnoremap <leader>q :bp<CR>
+nnoremap <leader>w :bn<CR>
+"B & E
+nnoremap B ^
+nnoremap E $
+nnoremap $ <nop>
+nnoremap ^ <nop>
+
+"""""""""""""""""""
+" General Setting "
+"""""""""""""""""""
+
 set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
@@ -18,8 +43,8 @@ set smartindent
 set pastetoggle=<F8>
 set nowrap
 set textwidth=0
-"set cursorline
-"set lazyredraw
+set cursorline
+set lazyredraw
 set colorcolumn=80
 set tabstop=4
 set shiftwidth=4
@@ -62,7 +87,7 @@ Plug 'vim-scripts/a.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-fugitive'
@@ -80,7 +105,7 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'tpope/vim-surround'
 Plug 'maralla/completor.vim'
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'davidhalter/jedi-vim'
+"Plug 'davidhalter/jedi-vim'
 Plug 'rhysd/vim-grammarous'
 Plug 'junhyeokahn/vim-xmark', { 'do': 'make' }
 Plug 'tpope/vim-eunuch'
@@ -113,7 +138,7 @@ let g:table_mode_header_fillchar='='
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
-" 1. Coloer Scheme
+" 1. Color Scheme
 let g:seoul256_background=237
 colo seoul256
 let g:airline_theme='zenburn'
@@ -123,7 +148,7 @@ set laststatus=2
 highlight CursorLine cterm=none
 
 " 2. C,C++
-let g:UltiSnipsUsePythonVersion=3
+let g:UltiSnipsUsePythonVersion=2
 let g:UltiSnipsExpandTrigger="<Tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-n>"
 let g:UltiSnipsJumpBackwardTrigger="<c-p>"
