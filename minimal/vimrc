@@ -2,7 +2,19 @@
 " .vimrc
 " Junhyeok Ahn ( junhyeokahn91@gmail.com )
 " =============================================================================
-
+" =============================================================================
+" Additional Setting
+" =============================================================================
+" Execute Python
+nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+" number
+set number relativenumber
+" save file
+noremap <silent> <C-S> :update<CR>
+vnoremap <silent> <C-S> <C-C>:update<CR>
+inoremap <silent> <C-S> <C-O>:update<CR>
+" map keys
+map ; :
 " =============================================================================
 " General Setting
 " =============================================================================
