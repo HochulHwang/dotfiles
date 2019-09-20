@@ -73,7 +73,7 @@ Plug 'vim-scripts/a.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-fugitive'
@@ -130,10 +130,10 @@ set laststatus=2
 highlight CursorLine cterm=none
 
 " 2. C,C++
-let g:UltiSnipsUsePythonVersion=3
-let g:UltiSnipsExpandTrigger="<Tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-n>"
-let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+"let g:UltiSnipsUsePythonVersion=3
+"let g:UltiSnipsExpandTrigger="<Tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-n>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 
 let g:cpp_class_scope_highlight=1
 let g:cpp_member_variable_highlight=1

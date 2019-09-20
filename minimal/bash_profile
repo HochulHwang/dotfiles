@@ -1,2 +1,6 @@
 . ~/.bashrc
 . ~/.bash_prompt
+
+PYTHONPATH=$PYTHONPATH:~/Desktop/etri/benchmark/glimpse_clouds/src
+PYTHONPATH=$PYTHONPATH:~/Desktop/etri/data/NTU_RGBD
+export PYTHONPATH
