@@ -103,7 +103,8 @@ export DYLD_LIBRARY_PATH="/Users/junhyeokahn/mosek/8/tools/platform/osx64x86/bin
 export CLICOLOR=1;
 export LSCOLORS=exfxcxdxbxegedabagacad;
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+#[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -z "$ZSH_NAME" ] && [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 ## github/hub
